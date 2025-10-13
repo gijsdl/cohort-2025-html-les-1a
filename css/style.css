@@ -1,36 +1,37 @@
-:root{
+:root {
     --primary-color: orange;
     --defualt-border: 2px solid red;
 }
 
-nav > a{
+nav>a {
     background-color: cyan;
     color: red;
 }
 
-nav > a:visited{
+nav>a:visited {
     color: green;
 }
 
-nav > a:hover{
+nav>a:hover {
     background-color: red;
     color: cyan;
 }
 
-#different-nav-link{
+#different-nav-link {
     color: black;
     background-color: cyan;
 }
 
-p, img{
+p,
+img {
     border: 2px solid black;
 }
 
-#logo{
+#logo {
     height: 50px;
 }
 
-.first-p{
+.first-p {
     color: #000000;
     background-color: var(--primary-color);
     font-size: 0.9em;
@@ -39,11 +40,11 @@ p, img{
     padding: 10px;
 }
 
-.border{
+.border {
     border: var(--defualt-border);
 }
 
-#wrapper{
+/* #wrapper{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 100px 100px 300px 100px;
@@ -100,6 +101,60 @@ footer{
     grid-column-start: 1;
     grid-row-end: 5;
     grid-column-end: 2;
+    background-color: purple;
+    text-align: center;
+} */
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 100px 300px 100px;
+    grid-template-areas:
+        "hd hd"
+        "nv as"
+        "mn as"
+        "ft as"
+    ;
+    gap: 5px;
+}
+
+header {
+    grid-area: hd;
+    background-color: aqua;
+    text-align: center;
+}
+
+nav {
+    grid-area: nv;
+    background-color: blue;
+    text-align: center;
+}
+
+main {
+    grid-area: mn;
+    background-color: orange;
+    text-align: center;
+}
+
+#overlay {
+    /* grid-row-start: 3;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 3; */
+    grid-area: 3/1/4/3;
+    background-color: rgba(255, 0, 0, 0.5);
+    text-align: center;
+    z-index: 1;
+}
+
+aside {
+    grid-area: as;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+footer {
+    grid-area: ft;
     background-color: purple;
     text-align: center;
 }

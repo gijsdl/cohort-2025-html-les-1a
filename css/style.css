@@ -1,8 +1,10 @@
+/* Les 8: CSS variabelen */
 :root {
     --primary-color: orange;
     --defualt-border: 2px solid red;
 }
 
+/* Les 6: Psuedo classes en combinators */
 nav>a {
     background-color: cyan;
     color: red;
@@ -27,10 +29,12 @@ img {
     border: 2px solid black;
 }
 
+/* Les 3: CSS koppeling */
 #logo {
     height: 50px;
 }
 
+/* Les 4: BOX-Model */
 .first-p {
     color: #000000;
     background-color: var(--primary-color);
@@ -44,6 +48,7 @@ img {
     border: var(--defualt-border);
 }
 
+/* Les 10: Grid placement */
 /* #wrapper{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -105,6 +110,7 @@ footer{
     text-align: center;
 } */
 
+/* Les 11: Grid area, Gap */
 #wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;

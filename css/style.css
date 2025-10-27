@@ -1,11 +1,11 @@
-/* Les 8: CSS variabelen */
+/* Les 8: CSS variabelen
 :root {
     --primary-color: orange;
     --defualt-border: 2px solid red;
 }
 
 /* Les 6: Psuedo classes en combinators */
-nav>a {
+/* nav>a {
     background-color: cyan;
     color: red;
 }
@@ -27,26 +27,26 @@ nav>a:hover {
 p,
 img {
     border: 2px solid black;
-}
+} */
 
 /* Les 3: CSS koppeling */
-#logo {
+/* #logo {
     height: 50px;
-}
+} */
 
 /* Les 4: BOX-Model */
-.first-p {
+/* .first-p {
     color: #000000;
     background-color: var(--primary-color);
     font-size: 0.9em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 80%;
     padding: 10px;
-}
+} */
 
-.border {
+/* .border {
     border: var(--defualt-border);
-}
+} */
 
 /* Les 10: Grid placement */
 /* #wrapper{
@@ -163,4 +163,46 @@ footer {
     grid-area: ft;
     background-color: purple;
     text-align: center;
+}
+
+/* les 13 */
+p{
+    font-size: 3em;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: blue;
+}
+
+ul{
+    margin: 50px;
+}
+
+li{
+    font-size: 3em;
+}
+
+table{
+    margin: 50px;
+}
+
+td, th{
+    font-size: 3em;
+}
+
+@media screen and (min-width: 769px) {
+    p{
+        font-size: 2em;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    p{
+        font-size: 1em;
+        margin-left: 400px;
+        margin-right: 400px;
+        color: red;
+    }
 }

@@ -111,7 +111,7 @@ footer{
 } */
 
 /* Les 11: Grid area, Gap */
-#wrapper {
+/* #wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 100px 100px 300px 100px;
@@ -143,10 +143,10 @@ main {
 }
 
 #overlay {
-    /* grid-row-start: 3;
+     grid-row-start: 3;
     grid-column-start: 1;
     grid-row-end: 4;
-    grid-column-end: 3; */
+    grid-column-end: 3; 
     grid-area: 3/1/4/3;
     background-color: rgba(255, 0, 0, 0.5);
     text-align: center;
@@ -163,10 +163,10 @@ footer {
     grid-area: ft;
     background-color: purple;
     text-align: center;
-}
+} */
 
-/* les 13 */
-p{
+/* les 13: Mobile first */
+/* p{
     font-size: 3em;
     margin-left: 50px;
     margin-right: 50px;
@@ -204,5 +204,96 @@ td, th{
         margin-left: 400px;
         margin-right: 400px;
         color: red;
+    }
+} */
+
+/* Les 14: Media queries + Grid */
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 300px 200px 100px;
+    grid-template-areas:
+        'hd'
+        'nv'
+        'mn'
+        'as'
+        'ft'
+    ;
+}
+
+header {
+    grid-area: hd;
+    background-color: aqua;
+    text-align: center;
+}
+
+nav {
+    grid-area: nv;
+    background-color: blue;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+main {
+    grid-area: mn;
+    background-color: orange;
+    text-align: center;
+}
+
+#overlay {
+    grid-area: 3 / 1 / 5 / 2;
+    background-color: rgba(255, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    z-index: 1;
+}
+
+aside {
+    grid-area: as;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+footer {
+    grid-area: ft;
+    background-color: purple;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    #wrapper {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 100px 100px 400px 100px;
+        grid-template-areas:
+            'hd hd'
+            'nv nv'
+            'mn as'
+            'ft ft'
+        ;
+    }
+
+    #overlay{
+        grid-area: 3 / 1 / 4 / 3;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #wrapper {
+        grid-template-columns: 1fr 7fr 1fr 3fr 1fr;
+        grid-template-areas:
+            'hd hd hd hd hd'
+            'nv nv nv nv nv'
+            '. mn . as .'
+            'ft ft ft ft ft'
+        ;
+    }
+
+    #overlay{
+        grid-area: 3 / 2 / 4 / 5;
     }
 }

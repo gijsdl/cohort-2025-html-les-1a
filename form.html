@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- p02 les 1 -->
+    <form>
+        <label for="name">Naam:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <label for="phone">Telefoonnummer:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <p>Ben je aanwezig?</p>
+        <input type="radio" id="yes" name="present" value="Ja">
+        <label for="yes">Ja</label><br>
+        <input type="radio" id="no" name="present" value="Nee">
+        <label for="no">Nee</label><br>
+        <p>Wat neem je mee?</p>
+        <input type="checkbox" id="money" name="gift" value="Geld">
+        <label for="money">Geld</label>
+        <input type="checkbox" id="soks" name="gift" value="Sokken">
+        <label for="soks">Sokken</label>
+        <input type="checkbox" id="coal" name="gift" value="Kolen">
+        <label for="coal">Kolen</label>
+        <input type="checkbox" id="cake" name="gift" value="Taart">
+        <label for="cake">Taart</label><br>
+        <label for="number">Nummer: </label>
+        <input type="number" id="number" name="number" min="1" max="10" step="0.01"><br>
+        <label for="date">Datum</label>
+        <input type="date" id="date" name="date"><br>
+        <label for="time">Tijd</label>
+        <input type="time" id="time" name="time"><br>
+        <label for="datetime">Datum-Tijd</label>
+        <input type="datetime-local" id="datetime" name="datetime"><br>
+        <!-- <input type="submit" value="Verzenden" name="submit"> -->
+        <button name="submit">Verzenden</button>
+    </form>
+</body>
+
+</html>

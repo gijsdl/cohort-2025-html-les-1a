@@ -11,7 +11,7 @@
     <!-- p02 les 1 -->
     <form>
         <label for="name">Naam:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name"><br>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"><br>
         <label for="phone">Telefoonnummer:</label>
@@ -39,6 +39,16 @@
         <label for="datetime">Datum-Tijd</label>
         <input type="datetime-local" id="datetime" name="datetime"><br>
         <!-- <input type="submit" value="Verzenden" name="submit"> -->
+        <!-- p02: les 2 -->
+        <label for="study">Opleiding:</label>
+        <select name="study" id="study" required>
+            <option value="">--Kies een opleiding--</option>
+            <option value="sd">Software Developer</option>
+            <option value="te">Techniek en Engeniring</option>
+            <option value="sb">Sport en beweging</option>
+        </select><br>
+        <label for="message">Bericht:</label><br>
+        <textarea id="message" name="message"></textarea><br>
         <button name="submit">Verzenden</button>
     </form>
 </body>

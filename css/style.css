@@ -297,3 +297,7 @@ footer {
         grid-area: 3 / 2 / 4 / 5;
     }
 }
+
+form{
+    margin-bottom: 50px;
+}

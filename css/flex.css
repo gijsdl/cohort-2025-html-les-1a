@@ -1,0 +1,23 @@
+/* P02 les 5 en 6 */
+nav{
+    display: flex;
+    background-color: pink;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link:hover{
+    background-color: yellow;
+    align-self: flex-end;
+}
+
+footer{
+    background-color: blue;
+    color: white;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

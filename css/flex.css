@@ -1,5 +1,5 @@
 /* P02 les 5 en 6 */
-nav{
+nav {
     display: flex;
     background-color: pink;
     height: 50px;
@@ -7,12 +7,12 @@ nav{
     align-items: center;
 }
 
-.link:hover{
+.link:hover {
     background-color: yellow;
     align-self: flex-end;
 }
 
-.flex-direction{
+.flex-direction {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-start;
@@ -23,13 +23,80 @@ nav{
 }
 
 /* p02 les 7 */
-.flex-direction div{
+.flex-direction div {
     background-color: red;
     width: 50px;
     height: 50px;
 }
 
-footer{
+.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+    height: 500px;
+    align-content: space-between;
+}
+
+.flex-wrap div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.flex-grow {
+    display: flex;
+    height: 250px;
+    /* width: 500px; */
+    gap: 5px;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+.flex-grow div {
+    /* width: 200px;
+    height: 100px; */
+    /* flex-grow: 1; */
+    background-color: cyan;
+}
+
+.flex-grow .one {
+    flex-grow: 1;
+}
+
+.flex-grow .two {
+    /* flex-grow: 2; */
+    flex-shrink: 5;
+}
+
+.flex-grow .three {
+    flex-grow: 3;
+}
+
+/* P02 les 10 */
+.flex-flex {
+    display: flex;
+    height: 200px;
+    gap: 5px;
+}
+
+.flex-one {
+    flex: 2 0 100px;
+    background-color: orange;
+
+}
+
+.flex-two {
+    flex: 1 4 100px;
+    background-color: orange;
+}
+
+.flex-three {
+    flex: 1 0 100px;
+    background-color: orange;
+}
+
+footer {
     background-color: blue;
     color: white;
     height: 500px;

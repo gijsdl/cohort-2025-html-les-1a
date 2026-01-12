@@ -1,0 +1,34 @@
+/* P02 les 11 */
+.transform{
+    width: 80px;
+    height: 80px;
+    background-color: green;
+    transition: 1s;
+    display: grid;
+    transform-style: preserve-3d;
+    /* transform-origin: top left; */
+}
+
+.transform:hover{
+    /* transform: rotate(20deg) skewX(20deg) scale(2); */
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front{
+    background-color: green;
+    grid-area: 1/1/2/2;
+    backface-visibility: hidden;
+}
+
+.back{
+    background-color: orange;
+    grid-area: 1/1/2/2;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}

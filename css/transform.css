@@ -1,5 +1,11 @@
+:root {
+    color-scheme: light dark;
+    --bg-color: light-dark(rgb(200, 200, 200), rgb(50, 50, 50));
+    --text-color: light-dark(rgb(0, 0, 0), rgb(200, 200, 200));
+}
+
 /* P02 les 11 */
-.transform{
+.transform {
     width: 80px;
     height: 80px;
     background-color: green;
@@ -9,26 +15,45 @@
     /* transform-origin: top left; */
 }
 
-.transform:hover{
+.transform:hover {
     /* transform: rotate(20deg) skewX(20deg) scale(2); */
     transform: rotateY(180deg);
 }
 
-.front, .back{
+.front,
+.back {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.front{
+.front {
     background-color: green;
     grid-area: 1/1/2/2;
     backface-visibility: hidden;
 }
 
-.back{
+.back {
     background-color: orange;
     grid-area: 1/1/2/2;
     transform: rotateY(180deg);
     backface-visibility: hidden;
+}
+
+/* P02 les 12 */
+
+.gradient {
+    padding: 80px;
+    width: 700px;
+    height: 500px;
+    /* border-image: linear-gradient(91deg, blue, lightgreen, darkblue, purple); */
+    border: solid;  
+    border-image: linear-gradient(to top, red, blue) 1 /10px;
+    /* background: radial-gradient(circle, blue, lightgreen, darkblue, purple); */
+    /* background: conic-gradient(blue 75deg, lightgreen, darkblue, purple); */
+}
+
+.light-dark {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }

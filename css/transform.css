@@ -9,23 +9,27 @@
     width: 80px;
     height: 80px;
     background-color: green;
-    transition: 1s;
-    display: grid;
-    transform-style: preserve-3d;
-    /* transform-origin: top left; */
+    /* P02 les 12 */
+    transition: transform 1s, width 5s;
+    transition-timing-function: ease-in;
+    transition-delay: 5s;
+    /* display: grid; */
+    /* transform-style: preserve-3d; */
+    transform-origin: top left;
 }
 
 .transform:hover {
-    /* transform: rotate(20deg) skewX(20deg) scale(2); */
-    transform: rotateY(180deg);
+    width: 300px;
+    transform: rotate(20deg) skewX(20deg) scale(2);
+    /* transform: rotateY(180deg); */
 }
 
-.front,
+/* .front,
 .back {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .front {
     background-color: green;
@@ -57,3 +61,14 @@
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+/* P02 les 12 */
+button{
+    background-color: rgba(255, 0, 0, 1);
+    transition: background-color 500ms;
+}
+
+button:hover{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+

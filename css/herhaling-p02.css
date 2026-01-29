@@ -1,0 +1,104 @@
+:root{
+    --border-color: orange;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px 300px 200px 50px;
+    grid-template-areas: 
+    "hd"
+    "nv"
+    "mn"
+    "as"
+    "ft"
+    ;
+    gap: 10px;
+}
+
+header{
+    grid-area: hd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border-color);
+}
+
+nav{
+    grid-area: nv;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid var(--border-color);
+}
+
+main{
+    grid-area: mn;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--border-color);
+}
+
+img{
+    height: 150px;
+}
+
+main>p{
+    width: 200px;
+}
+
+aside{
+    grid-area: as;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border-color);
+}
+
+footer{
+    grid-area: ft;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border-color);
+}
+
+@media screen and (min-width: 769px) {
+    .wrapper{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 100px 50px 300px 50px;
+        grid-template-areas: 
+        "hd hd"
+        "nv nv"
+        "mn as"
+        "ft ft"
+        ;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .wrapper{
+        height: 100vh;
+        grid-template-columns: 100px 2fr 1fr 100px;
+        grid-template-rows: 100px 50px 1fr 50px;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "nv nv nv nv"
+        ". mn as ."
+        "ft ft ft ft"
+        ;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+}

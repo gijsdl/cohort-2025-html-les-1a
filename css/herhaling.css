@@ -1,89 +1,36 @@
-/* table, th, td{
-    border: 1px solid black;
-}
-
-tr{
-    background-color: aqua;
-}
-
-td{
-    background-color: red;
-} */
-
-/* .wrapper{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.item{
-    background-color: green;
-    width: 150px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}*/
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .wrapper{
     display: grid;
-    grid-template-rows: 80px 500px 80px;
     grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 300px 200px 100px;
     grid-template-areas: 
     "hd hd hd"
-    ". mn as"
+    "ru im ."
+    ". bt ."
     "ft ft ft"
     ;
 }
 
 header{
-    background-color: lightgreen;
-    /* grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: 2;
-    grid-column-end: 4; */
     grid-area: hd;
-}
-
-main{
-    background-color: blue;
-    grid-area: mn;
+    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.game{
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-}
-
-.tile{
-    background-color: yellow;
-    border: 5px solid black;
-}
-
-/* .overlay{
-    background-color: rgba(255, 50, 50, 0.5);
-    grid-area: 2 / 1 / 3 / 3;
-} */
-
 aside{
-    background-color: darkred;
-    grid-area: as;
+    grid-area: ru;
+}
+
+img{
+    grid-area: im;
+}
+
+button{
+    grid-area: bt;
 }
 
 footer{
-    background-color: aqua;
     grid-area: ft;
+    background-color: red;
 }
